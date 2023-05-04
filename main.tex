@@ -1,0 +1,34 @@
+\documentclass[11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{pgfplots} %for tikz figures
+\usepackage{minted}   %code highlighting
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage[dvipsnames,svgnames,x11names]{xcolor}
+\pgfplotsset{compat=1.3}
+
+\title{\textbf{\Large{Open\:Notes}}\\
+{\Large Central University of Punjab}}
+\author{Piyush}
+\date{March 2023}
+
+\begin{document}
+\maketitle
+\chapter*{Abstract}
+\colorbox{yellow}{orange background}
+\chapter*{Dedication}
+\chapter*{Acknowledgements}
+
+\tableofcontents
+\listoffigures
+\renewcommand\listoflistingscaption{List of codes}
+\listoflistings % Now typeset the list
+\include{chapter1}
+\include{chapter2}
+\appendix
+\include{Appendix}
+
+\bibliographystyle{plain}
+\bibliography{Ref}
+\end{document}
