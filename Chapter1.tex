@@ -29,5 +29,48 @@ plt.plot(x1,funci(x1),color='mediumslateblue',Linewidth=3.0)
 plt.scatter(x_ran,y_ran,linewidth=0.007,c ="deeppink",alpha=0.3)
 \end{minted}
 \caption{Monte-Carlo Integration}
-\label{listing :1}
+%\label{listing :1}
+\end{listing}
+
+\section{Interpolation}
+\subsection{Lagrangian Interpolation}
+\begin{listing}[ht!]
+\begin{minted}{fortran}
+program Lag_Int
+
+      implicit none
+
+      integer,parameter::n=4
+      real,dimension(n) :: y,x
+      real :: a
+      integer :: i,j
+      real:: p=1,s=0
+
+      print*,"y =f(x)"
+
+      get_value:do i=1,n !..................................get_value
+      print*,"Enter x",i,"y",i
+      read(*,*)x(i),y(i) 
+      end do get_value
+
+      print*,"Give the value of x for which y has to be calculate"
+      read(*,*)a
+
+      calculation: do i=1,3 !...............................Calculation
+      product_1:do j=1,3
+      if(j==i)cycle
+      p=p*((a-x(j))/(x(i)-x(j)))
+      end do product_1
+      s=s+(y(i)*p)
+      p=1 !..................................................Important
+      !After every iteration of loop i the value of p should be updated
+      !back to 1
+      end do calculation
+
+      print*,"The y value of ",a," = ",s
+
+      end program Lag_Int
+\end{minted}
+\caption{Lagrangian Interpolation}
+%\label{listing :2}
 \end{listing}
