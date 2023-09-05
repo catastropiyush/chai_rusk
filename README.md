@@ -1,5 +1,5 @@
 # chai_rusk
-Our goal is top create accessible notes and codes required for the Masters programme in Computational Sciences 
+Our goal is to create accessible notes and codes required for the Masters programme in Computational Sciences 
     (Physics,Chemistry and Bioinformatics).
 
 #### `Subjects`
